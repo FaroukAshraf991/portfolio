@@ -20,6 +20,9 @@ export type Project = {
   tags: string[]
   githubUrl?: string
   liveUrl?: string
+  // Real screenshot path (in /public/screenshots/) — takes priority over
+  // the gradient placeholder below when set. See PORTFOLIO_GUIDE.md §5.
+  screenshot?: string
   // Gradient used for the placeholder thumbnail until a real screenshot
   // is dropped into /public/screenshots/<slug>.png — see PORTFOLIO_GUIDE.md §5.
   gradient: string
@@ -71,6 +74,7 @@ export const projects: Project[] = [
     tags: ['React Native', 'Expo', 'Supabase', 'Groq / Llama 3.3', 'Product Design'],
     githubUrl: 'https://github.com/FaroukAshraf991/glimmer',
     liveUrl: 'https://getglimmer.vercel.app',
+    screenshot: 'screenshots/glimmer.png',
     gradient: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
     accentEmoji: '✨',
   },
@@ -94,6 +98,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'React', 'Supabase', 'Zustand', 'E-commerce'],
     githubUrl: 'https://github.com/FaroukAshraf991/sip-with-nagdi',
     liveUrl: 'https://sipwithnagdi.vercel.app',
+    screenshot: 'screenshots/sip-with-nagdi.png',
     gradient: 'linear-gradient(135deg, #92400e 0%, #451a03 100%)',
     accentEmoji: '☕',
   },

@@ -6,16 +6,27 @@ export function ProjectCard({ project }: { project: Project }) {
       className="rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] overflow-hidden flex flex-col"
       style={{ boxShadow: 'var(--card-shadow)' }}
     >
-      {/* Placeholder thumbnail — swap for a real screenshot at
-          /public/screenshots/<slug>.png, see PORTFOLIO_GUIDE.md §5 */}
-      <div
-        className="aspect-[16/10] flex items-center justify-center text-5xl"
-        style={{ background: project.gradient }}
-      >
-        <span role="img" aria-hidden="true">
-          {project.accentEmoji}
-        </span>
-      </div>
+      {project.screenshot ? (
+        <div className="aspect-[16/10] overflow-hidden">
+          <img
+            src={`${import.meta.env.BASE_URL}${project.screenshot}`}
+            alt={`${project.name} screenshot`}
+            className="w-full h-full object-cover object-top"
+            loading="lazy"
+          />
+        </div>
+      ) : (
+        // Placeholder thumbnail — swap for a real screenshot at
+        // /public/screenshots/<slug>.png, see PORTFOLIO_GUIDE.md §5
+        <div
+          className="aspect-[16/10] flex items-center justify-center text-5xl"
+          style={{ background: project.gradient }}
+        >
+          <span role="img" aria-hidden="true">
+            {project.accentEmoji}
+          </span>
+        </div>
+      )}
 
       <div className="p-6 flex flex-col flex-1">
         <h3 className="text-lg font-bold text-[var(--text-h)]">{project.name}</h3>
