@@ -58,6 +58,7 @@ export const projects: Project[] = [
       'A multi-tenant garage management system that tracks customers, vehicles, and full service history with running cost totals, printable receipts, and printable vehicle reports. Includes an Egyptian-plate display component and a bilingual (Arabic/English) interface built mobile-first.',
     tags: ['Next.js', 'React', 'Supabase', 'RLS', 'Tailwind CSS', 'PDF Generation'],
     githubUrl: 'https://github.com/FaroukAshraf991/StepGarage',
+    liveUrl: 'https://manage-workshop.vercel.app',
     gradient: 'linear-gradient(135deg, #f97316 0%, #dc2626 100%)',
     accentEmoji: '🔧',
   },
