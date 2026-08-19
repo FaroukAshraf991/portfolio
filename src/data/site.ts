@@ -7,9 +7,8 @@ export const profile = {
   tagline: 'Full-stack developer building production SaaS and mobile apps for the Egyptian market',
   email: 'fifoashraf991@gmail.com',
   github: 'https://github.com/FaroukAshraf991',
-  // TODO: add your LinkedIn URL
-  linkedin: '',
-  // TODO: add a link to a hosted resume PDF (e.g. in /public/resume.pdf)
+  linkedin: 'https://www.linkedin.com/in/farouk-ashraf-3ba272330/',
+  // TODO: add a link to a hosted resume PDF (e.g. in /public/resume.pdf) once it's ready
   resumeUrl: '',
 }
 
@@ -47,6 +46,7 @@ export const projects: Project[] = [
       'A booking SaaS designed around how independent barbers in Egypt actually work: a public booking link shared straight from Instagram/WhatsApp, and an owner dashboard for managing services, availability, clients, and billing. Evolved from a single-tenant MVP into a full multi-tenant SaaS with subscription tiers, feature-gating, and an admin operator portal.',
     tags: ['Next.js', 'React', 'Supabase', 'Multi-tenant SaaS', 'RLS', 'Tailwind CSS'],
     githubUrl: 'https://github.com/FaroukAshraf991/dashboard',
+    liveUrl: 'https://dashboard-ruby-six-73.vercel.app',
     gradient: 'linear-gradient(135deg, #0ea5e9 0%, #22c55e 100%)',
     accentEmoji: '💈',
   },
@@ -69,6 +69,7 @@ export const projects: Project[] = [
       'A mobile mental-wellbeing companion — not a therapist or chatbot — built around a simple loop: Rescue (breathing exercises, AI-guided talk-it-out, small suggested actions), Reflection (mood logging), and Momentum (tracking small wins). Crisis resources are always reachable without logging in, with a distinctive "deep dusk" visual design.',
     tags: ['React Native', 'Expo', 'Supabase', 'Groq / Llama 3.3', 'Product Design'],
     githubUrl: 'https://github.com/FaroukAshraf991/glimmer',
+    liveUrl: 'https://getglimmer.vercel.app',
     gradient: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
     accentEmoji: '✨',
   },
@@ -91,6 +92,7 @@ export const projects: Project[] = [
       'A storefront selling coffee equipment (Hario, Fellow, La Marzocco, and more) to Egyptian customers, with a full admin dashboard for products, discounts, and orders, and a bilingual EN/AR customer experience.',
     tags: ['Next.js', 'React', 'Supabase', 'Zustand', 'E-commerce'],
     githubUrl: 'https://github.com/FaroukAshraf991/sip-with-nagdi',
+    liveUrl: 'https://sipwithnagdi.vercel.app',
     gradient: 'linear-gradient(135deg, #92400e 0%, #451a03 100%)',
     accentEmoji: '☕',
   },
