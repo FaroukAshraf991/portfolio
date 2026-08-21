@@ -64,7 +64,7 @@ export function ProjectCard({ project }: { project: Project }) {
               rel="noreferrer"
               className="text-sm font-semibold text-[var(--text-h)] underline underline-offset-4 hover:text-[var(--accent)] transition"
             >
-              Live demo →
+              {project.liveLabel ?? 'Live demo'} →
             </a>
           )}
         </div>

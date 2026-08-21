@@ -31,6 +31,10 @@ export type Project = {
   tags: string[]
   githubUrl?: string
   liveUrl?: string
+  // Link text for liveUrl — defaults to "Live demo". Use "Live Website" for
+  // projects where liveUrl is the real, fully-functional production site
+  // (not a fake-data demo build).
+  liveLabel?: string
   // Real screenshot path (in /public/screenshots/) — takes priority over
   // the gradient placeholder below when set. See PORTFOLIO_GUIDE.md §5.
   screenshot?: string
@@ -117,6 +121,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'React', 'Supabase', 'Zustand', 'E-commerce'],
     githubUrl: 'https://github.com/FaroukAshraf991/sip-with-nagdi',
     liveUrl: 'https://sipwithnagdi.vercel.app',
+    liveLabel: 'Live Website',
     screenshot: 'screenshots/sip-with-nagdi.png',
     gradient: 'linear-gradient(135deg, #92400e 0%, #451a03 100%)',
     accentEmoji: '☕',
