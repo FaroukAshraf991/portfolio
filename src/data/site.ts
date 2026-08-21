@@ -78,6 +78,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'React', 'Supabase', 'RLS', 'Tailwind CSS', 'PDF Generation'],
     githubUrl: 'https://github.com/FaroukAshraf991/StepGarage',
     liveUrl: 'https://manage-workshop.vercel.app/demo',
+    liveLabel: 'Live Website',
     screenshot: 'screenshots/stepgarage.png',
     gradient: 'linear-gradient(135deg, #f97316 0%, #dc2626 100%)',
     accentEmoji: '🔧',
