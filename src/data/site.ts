@@ -12,6 +12,17 @@ export const profile = {
   resumeUrl: '',
 }
 
+// Builds a link to the phone-frame demo viewer (public/phone-demo.html) for
+// apps with no real backend to link to — a fake-data web build embedded in
+// a phone mockup. `appPath` is relative to /public/demos/<slug>/.
+function phoneDemoUrl(appPath: string, title: string, note?: string): string {
+  const base = import.meta.env.BASE_URL
+  const src = `${base}demos/${appPath}`
+  const params = new URLSearchParams({ src, title })
+  if (note) params.set('note', note)
+  return `${base}phone-demo.html?${params.toString()}`
+}
+
 export type Project = {
   slug: string
   name: string
@@ -88,6 +99,12 @@ export const projects: Project[] = [
       'A Flutter navigation app built on MapLibre GL, OSRM, and Nominatim instead of Google/Mapbox — full turn-by-turn routing, geocoding search, saved locations synced via Supabase, and a 3D navigation engine with auto-bearing and tilt. Built to prove real navigation UX doesn\'t require a paid API bill.',
     tags: ['Flutter', 'MapLibre GL', 'OSRM', 'Supabase', 'Geolocation'],
     githubUrl: 'https://github.com/FaroukAshraf991/mapy',
+    liveUrl: phoneDemoUrl(
+      'mapy/index.html',
+      'Mapy',
+      'Fake demo — real map, search, and OSRM routing. No account, no saved data, no real backend.',
+    ),
+    screenshot: 'screenshots/mapy.jpg',
     gradient: 'linear-gradient(135deg, #14b8a6 0%, #0891b2 100%)',
     accentEmoji: '🧭',
   },

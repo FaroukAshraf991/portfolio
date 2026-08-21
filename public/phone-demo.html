@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Demo</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      :root {
+        --bg: #0a0a0c;
+        --text: #fafafa;
+        --text-dim: #a1a1aa;
+        --border: #232328;
+        --accent: #a78bfa;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #fafafa;
+          --text: #09090b;
+          --text-dim: #71717a;
+          --border: #e4e4e7;
+          --accent: #7c3aed;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 16px 48px;
+      }
+      .topbar {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px;
+      }
+      .back {
+        color: var(--text-dim);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .back:hover {
+        color: var(--text);
+      }
+      h1 {
+        font-size: 18px;
+        margin: 0;
+        font-weight: 700;
+      }
+      .subtitle {
+        color: var(--text-dim);
+        font-size: 13px;
+        text-align: center;
+        max-width: 480px;
+        margin: 0 0 28px;
+        line-height: 1.5;
+      }
+      .phone {
+        width: 375px;
+        max-width: 100%;
+        aspect-ratio: 375 / 812;
+        background: #000;
+        border-radius: 48px;
+        padding: 40px 14px 14px;
+        box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5), 0 0 0 2px var(--border);
+        position: relative;
+      }
+      .phone::before {
+        content: '';
+        position: absolute;
+        top: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 26px;
+        background: #000;
+        border-radius: 16px;
+        z-index: 2;
+      }
+      .screen {
+        width: 100%;
+        height: 100%;
+        border-radius: 34px;
+        overflow: hidden;
+        background: #000;
+        position: relative;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+      }
+      .loading {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        font-size: 13px;
+        background: #000;
+      }
+      .footer-note {
+        margin-top: 24px;
+        color: var(--text-dim);
+        font-size: 12px;
+        text-align: center;
+        max-width: 480px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <a class="back" href="javascript:history.back()">← Back to portfolio</a>
+      <h1 id="app-title">Live Demo</h1>
+      <span style="width: 100px"></span>
+    </div>
+    <p class="subtitle" id="app-subtitle"></p>
+    <div class="phone">
+      <div class="screen">
+        <div class="loading" id="loading">Loading…</div>
+        <iframe id="demo-frame" title="App demo" allow="clipboard-write"></iframe>
+      </div>
+    </div>
+    <p class="footer-note" id="footer-note"></p>
+    <script>
+      const params = new URLSearchParams(location.search);
+      const src = params.get('src');
+      const title = params.get('title') || 'Live Demo';
+      const note =
+        params.get('note') ||
+        'Fake demo — real map/search/routing, no real backend or account behind it.';
+
+      document.title = title;
+      document.getElementById('app-title').textContent = title;
+      document.getElementById('footer-note').textContent = note;
+
+      const frame = document.getElementById('demo-frame');
+      const loading = document.getElementById('loading');
+      if (src) {
+        frame.src = src;
+        frame.addEventListener('load', () => {
+          loading.style.display = 'none';
+        });
+      } else {
+        loading.textContent = 'No demo specified.';
+      }
+    </script>
+  </body>
+</html>
