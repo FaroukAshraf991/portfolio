@@ -43,13 +43,13 @@ export const projects: Project[] = [
   },
   {
     slug: 'mansy',
-    name: "Mansy — Barber's Dashboard",
+    name: "Barber's Dashboard",
     headline: 'WhatsApp-native booking, built for solo barbers.',
     description:
       'A booking SaaS designed around how independent barbers in Egypt actually work: a public booking link shared straight from Instagram/WhatsApp, and an owner dashboard for managing services, availability, clients, and billing. Evolved from a single-tenant MVP into a full multi-tenant SaaS with subscription tiers, feature-gating, and an admin operator portal.',
     tags: ['Next.js', 'React', 'Supabase', 'Multi-tenant SaaS', 'RLS', 'Tailwind CSS'],
     githubUrl: 'https://github.com/FaroukAshraf991/dashboard',
-    liveUrl: 'https://dashboard-ruby-six-73.vercel.app',
+    liveUrl: 'https://dashboard-ruby-six-73.vercel.app/barber-3746e7',
     gradient: 'linear-gradient(135deg, #0ea5e9 0%, #22c55e 100%)',
     accentEmoji: '💈',
   },
