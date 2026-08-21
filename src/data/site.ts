@@ -50,6 +50,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'React', 'Supabase', 'Multi-tenant SaaS', 'RLS', 'Tailwind CSS'],
     githubUrl: 'https://github.com/FaroukAshraf991/dashboard',
     liveUrl: 'https://dashboard-ruby-six-73.vercel.app/barber-3746e7',
+    screenshot: 'screenshots/mansy.png',
     gradient: 'linear-gradient(135deg, #0ea5e9 0%, #22c55e 100%)',
     accentEmoji: '💈',
   },
