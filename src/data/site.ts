@@ -53,6 +53,12 @@ export const projects: Project[] = [
       "A cross-platform mobile app that lets friend groups share live location, send walkie-talkie-style voice messages, and coordinate while driving — built Arabic-first with full RTL support for the MENA market. Includes end-to-end encrypted voice/chat, background location with staleness indicators on a live map, and a deep-link squad-invite flow.",
     tags: ['React Native', 'Expo', 'Supabase', 'PostGIS', 'Realtime', 'E2E Encryption', 'i18n'],
     githubUrl: 'https://github.com/FaroukAshraf991/rollSquad',
+    liveUrl: phoneDemoUrl(
+      'rollsquad/index.html',
+      'RollSquad',
+      "Fake demo — RollSquad is built for friends to coordinate live together, so a solo visitor can't see real-time sync in action. This shows a sample squad with the real map, drawer, and SOS UI — no real accounts, no real backend.",
+    ),
+    screenshot: 'screenshots/rollsquad.jpg',
     gradient: 'linear-gradient(135deg, #7c3aed 0%, #2563eb 100%)',
     accentEmoji: '📍',
   },
