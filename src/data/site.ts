@@ -72,7 +72,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'stepgarage',
-    name: 'StepGarage — Workshop Manager',
+    name: 'Workshop Manager',
     headline: 'Service history and receipts for Egyptian auto workshops.',
     description:
       'A multi-tenant garage management system that tracks customers, vehicles, and full service history with running cost totals, printable receipts, and printable vehicle reports. Includes an Egyptian-plate display component and a bilingual (Arabic/English) interface built mobile-first.',
